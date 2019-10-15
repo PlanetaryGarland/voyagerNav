@@ -1,0 +1,47 @@
+Object = photomet
+  IsisVersion       = "3.4.9.6185 stable | 2015-03-26"
+  ProgramVersion    = 2013-02-25
+  ProgramPath       = /mnt/home/john.blalock/no_backup/Isis_3/isis/bin
+  ExecutionDateTime = 2016-07-29T15:40:50
+  HostName          = Unknown
+  UserName          = john.blalock
+  Description       = "Perform photometric corrections on a cube"
+
+  Group = UserParameters
+    FROM         = /mnt/md1200/blalock/Voyager/ISS_Saturn_Observation/Level_2-
+                   /clear/441xxxx/c4419938.cal.cub
+    TO           = /mnt/md1200/blalock/Voyager/ISS_Saturn_Observation/Level_2-
+                   /clear/441xxxx/c4419938.pho.cub
+    FROMPVL      = /mnt/md1200/blalock/Voyager/ISS_Saturn_Observation/Isis_Ph-
+                   otometric_Corrections/voyager_iss_clear.pvl
+    CHNGPAR      = None
+    MAXEMISSION  = 87.0
+    MAXINCIDENCE = 87.0
+    USEDEM       = FALSE
+    ANGLESOURCE  = ELLIPSOID
+    PHTNAME      = FROMPVL
+    NORMNAME     = FROMPVL
+  End_Group
+
+  Group = NormalizationModelParametersUsed
+    NORMNAME = ALBEDO
+    Incref   = 0.0
+    Thresh   = 30.0
+    Albedo   = 1.0
+  End_Group
+
+  Group = AtmosphericModelParametersUsed
+  End_Group
+
+  Group = PhotometricModelParametersUsed
+    PHTNAME = MINNAERT
+    K       = 0.5
+  End_Group
+
+  Group = Accounting
+    ConnectTime = 00:00:26.0
+    CpuTime     = 00:00:25.8
+  End_Group
+End_Object
+
+

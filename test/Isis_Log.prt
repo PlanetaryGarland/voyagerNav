@@ -1,0 +1,23 @@
+Object = voycal
+  IsisVersion       = "3.4.9.6185 stable | 2015-03-26"
+  ProgramVersion    = 2012-07-06
+  ProgramPath       = /mnt/home/john.blalock/no_backup/Isis_3/isis/bin
+  ExecutionDateTime = 2016-07-27T15:15:41
+  HostName          = Unknown
+  UserName          = john.blalock
+  Description       = "Radiometric correction of Voyager 1 and 2 planetary
+                       images"
+
+  Group = UserParameters
+    FROM   = c4290650.rrx.cub
+    TO     = c4290650.cal.cub
+    LINEAR = TRUE
+  End_Group
+
+  Group = Accounting
+    ConnectTime = 00:00:00.0
+    CpuTime     = 00:00:00.7
+  End_Group
+End_Object
+
+

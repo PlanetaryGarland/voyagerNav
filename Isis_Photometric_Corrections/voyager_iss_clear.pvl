@@ -1,0 +1,14 @@
+Object = PhotometricModel
+	Group = Algorithm
+		PhtName = Minnaert
+		K = 0.5
+	EndGroup
+EndObject
+Object = NormalizationModel
+	Group = Algorithm
+		NormName = Albedo
+		Incref = 0.0
+		Albedo = 1.0
+		Thresh = 30.0
+	EndGroup
+EndObject
